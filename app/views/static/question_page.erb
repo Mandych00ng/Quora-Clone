@@ -1,0 +1,7 @@
+<p>Questions</p>
+
+<h3><%=@question.title%></h3>
+<p><% @answers.each do |a| %>
+<%= a.answer %>
+	<% end %>
+</p>

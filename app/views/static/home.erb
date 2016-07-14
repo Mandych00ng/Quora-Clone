@@ -1,0 +1,21 @@
+<a href='/logout'>Log Out</a>
+<h1>Welcome! <%= current_user.email %></h1>
+<div class="newsfeed">
+	<% Question.all.each do |q| %>
+	<div>
+	<a href="/user/<%=q.user.id %>"><%= q.user.full_name %>
+	<a href="/question/<%=q.id%>"><%=q.title%></a>
+	<% q.answers.first(2).each do |a| %>
+	<p><%= a.user.full_name %>
+	<%= a.answer%>
+	</p>
+	<% end %>
+	</div><br>
+	<% end %>
+	<% Question.all.each do |x| %>
+	<form id="answer_question" action="/<%= @user.user %>/questions/<%= x.id %>/answer" method=post>
+	<input type=text placeholder="Comment here" name="answer[answer]">
+	<input type=submit value="Post">
+	</form>
+	<% end %>
+</div>

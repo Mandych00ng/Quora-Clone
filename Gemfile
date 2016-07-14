@@ -2,13 +2,14 @@ source 'https://rubygems.org'
 
 # Ruby Version
 # ruby "2.2.1"
-
+gem 'validates_email_format_of'
 # Adding Sinatra Drivers
 gem 'sinatra'
 gem 'sinatra-contrib'
 
 # Adding thin gem as advised
 gem 'thin'
+gem 'bcrypt', '~>3.1.7'
 
 # Adding ActiveRecord and Database Components
 gem 'activerecord'

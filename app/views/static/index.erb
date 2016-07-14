@@ -1,2 +1,31 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1 class="pagetitle">Quora</h1>
+<p id="caption1">Ask anything and answer many things</p>
+<% if params[:error] %>
+	<p> You have not logged in!</p>
+	<% end %>
+
+
+<div id="wrap">
+  <div id="regbar">
+    <div id="navthing">
+      <h2><a id="loginform">Login</a> | <a href="/signup">Register</a></h2>
+    <div class="login">
+      <div class="arrow-up"></div>
+      <div class="formholder">
+        <div class="randompad">
+           <form method=post action="/login">
+           <fieldset>
+             <label name="email">Email</label>
+             <input type="text" name="user[email]" /><br>
+             <label name="password">Password</label>
+             <input type="password" name="user[password]" />
+             <input type="submit" value="Login" />
+ 
+           </fieldset>
+           </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>   

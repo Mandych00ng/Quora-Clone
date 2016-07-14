@@ -1,0 +1,12 @@
+<p>User</p>
+
+<h3><%= @user.full_name %></h3>
+<p>All Questions</p>
+<% @questions.each do |q| %>
+<p><%= q.title %></p>
+	<% end %>
+
+<p>All Answers</p>
+<% @answers.each do |a| %>
+<p><%= a.answer %></p>
+	<% end %>
